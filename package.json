@@ -1,0 +1,10 @@
+{
+  "name": "sigfides-tools",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "echo \"no build step\""
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  }
+}
