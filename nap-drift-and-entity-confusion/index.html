@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>NAP Drift & Entity Confusion — How Inconsistent Signals Damage Local Visibility</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="NAP drift happens when different versions of your business details remain online after moves, rebrands or updates. Learn how NAP drift creates entity confusion and weakens local search and proximity signals." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --bg: #020617;
+  --border: #1f2937;
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+  --accent-teal: #22d3ee;
+  --accent-orange: #f97316;
+  --max-width: 1100px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #0b1120, #020617 60%);
+  color: var(--text-main);
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px 16px 60px;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: #020617;
+  border: 1px solid rgba(148,163,184,.4);
+  box-shadow: 0 10px 30px rgba(0,0,0,.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.logo img { width: 95%; height: auto; display: block; }
+
+.title {
+  font-family: "Playfair Display", serif;
+  letter-spacing: .15em;
+  font-size: 1.3rem;
+}
+
+.tagline {
+  color: var(--text-muted);
+  letter-spacing: .12em;
+  font-size: .8rem;
+  text-transform: uppercase;
+}
+
+/* Hero */
+
+.hero { text-align: center; }
+
+.hero .badge {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  margin-bottom: 8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(148,163,184,.5);
+  color: var(--text-muted);
+  font-size: .8rem;
+}
+
+.hero .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg,#f97316,#22d3ee);
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.9rem, 5vw, 2.4rem);
+  line-height: 1.2;
+  margin: 6px 0 10px;
+}
+
+.hero p {
+  max-width: 780px;
+  margin: 0 auto;
+  color: var(--text-muted);
+  font-size: .96rem;
+}
+
+/* Content */
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.45rem;
+  margin: 0 0 6px;
+}
+
+.section-intro {
+  color: var(--text-muted);
+  max-width: 820px;
+  margin: 2px 0 12px;
+  font-size: .95rem;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: #020617;
+  padding: 16px 14px 14px;
+  margin-top: 14px;
+}
+
+ul {
+  margin: 6px 0 6px 1.15rem;
+  padding: 0;
+}
+
+li { margin-bottom: 4px; }
+
+strong { font-weight: 600; }
+
+a { color: inherit; text-decoration: none; }
+
+.callout {
+  margin-top: 14px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(249,115,22,.6);
+  background: linear-gradient(135deg,rgba(249,115,22,.18),rgba(15,23,42,.9));
+  font-size: .9rem;
+}
+
+.pill-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.pill {
+  border-radius: 999px;
+  border: 1px solid rgba(148,163,184,.45);
+  padding: 6px 12px;
+  font-size: .8rem;
+  color: var(--accent-teal);
+}
+
+/* Footer */
+
+footer {
+  margin-top: 28px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(148,163,184,.4);
+  text-align: center;
+  color: var(--text-muted);
+  font-size: .8rem;
+}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+  <header>
+    <div class="logo">
+      <img src="/Sigfides.png" alt="Sigfides logo" />
+    </div>
+    <div class="title">SIGFIDES</div>
+    <div class="tagline">Trusted Signals for Real-World Identity</div>
+  </header>
+
+  <section class="hero">
+    <div class="badge"><span class="dot"></span> Identity &amp; Proximity Knowledge Hub</div>
+
+    <h1>NAP Drift &amp; Entity Confusion — The Hidden Cause of Lost Local Visibility</h1>
+
+    <p>
+      NAP drift happens when multiple versions of your business name, address or phone remain online after moves,
+      rebrands or organisational changes. Over time, this creates <strong>entity confusion</strong> — where search and
+      AI systems are no longer fully certain which identity is real, current or trustworthy.
+    </p>
+  </section>
+
+  <div class="card">
+    <h2>What is NAP drift?</h2>
+
+    <p class="section-intro">
+      NAP = Name, Address, Phone. Drift happens gradually, as fragments of old data remain online.
+    </p>
+
+    <ul>
+      <li>You relocate, but your old address still appears on older landing pages and directories.</li>
+      <li>You change numbers, but the previous phone is still indexed on cached pages.</li>
+      <li>You rebrand, but mixed naming patterns continue across citations and schema.</li>
+      <li>You restructure or merge locations, but both versions stay discoverable.</li>
+    </ul>
+
+    <p>
+      None of these single issues seem serious in isolation. But to a machine trying to build a coherent entity profile,
+      they are contradictions — and contradictions reduce confidence.
+    </p>
+
+    <div class="callout">
+      NAP drift is not about aesthetics or “SEO neatness”. It directly affects how confidently your business can be shown
+      in local, map and proximity-based results.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>How NAP drift creates entity confusion</h2>
+
+    <p class="section-intro">
+      When multiple versions of your identity are still visible and crawlable, systems ask:
+    </p>
+
+    <ul>
+      <li>Is this one business or two?</li>
+      <li>Was this a relocation or a second branch?</li>
+      <li>Is the old address still active?</li>
+      <li>Which phone number should be trusted?</li>
+    </ul>
+
+    <p>
+      Instead of one strong entity with clear proximity relevance, your signals now describe
+      <strong>an unstable identity with unresolved history</strong>.
+    </p>
+
+    <ul>
+      <li>Proximity coverage becomes patchy.</li>
+      <li>Visibility shifts unpredictably between “old” and “new” areas.</li>
+      <li>GBP and website signals no longer fully reinforce each other.</li>
+      <li>AI summaries pull mixed or outdated details.</li>
+    </ul>
+
+    <p>
+      This is why businesses often report:
+    </p>
+
+    <ul>
+      <li>“We moved two years ago and rankings never recovered.”</li>
+      <li>“We added a second location and everything became unstable.”</li>
+      <li>“We have strong reviews but weak local coverage.”</li>
+    </ul>
+
+    <p>
+      The issue is rarely competition — it is <strong>identity inconsistency</strong>.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Where NAP drift most commonly occurs</h2>
+
+    <p class="section-intro">
+      Sigfides frequently sees drift problems in:
+    </p>
+
+    <ul>
+      <li>Industrial estates &amp; business parks with multiple unit relocations.</li>
+      <li>Trades &amp; service companies moving from yard to depot or warehouse.</li>
+      <li>Engineering firms evolving from workshop → factory → multi-site network.</li>
+      <li>Franchises and dealer groups changing naming conventions over time.</li>
+      <li>Legacy businesses with decades of offline history and digitised records.</li>
+    </ul>
+
+    <p>
+      In these environments, small inconsistencies pile up fast — because each change leaves data behind.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>How canonical identity fixes NAP drift</h2>
+
+    <p class="section-intro">
+      The solution is not “citations cleanup” or mass directory updates.
+      The solution is <strong>canonical identity alignment</strong>.
+    </p>
+
+    <ul>
+      <li>Confirm the correct name, address, phone, coordinates and entrance.</li>
+      <li>Define one Canonical Identity Record as the version that must win.</li>
+      <li>Update GBP, schema and key landing pages to match that record.</li>
+      <li>Audit &amp; neutralise conflicting signals, legacy pages and old URLs.</li>
+      <li>Ensure robots.txt and sitemaps do not continue surfacing outdated data.</li>
+    </ul>
+
+    <p>
+      Once identity stabilises, proximity and local confidence stabilise with it.
+    </p>
+
+    <div class="callout">
+      Mapping tools (including Local Falcon–style engines) only give meaningful insight
+      <strong>after your coordinates, pin placement and canonical NAP are correct</strong>.
+      If those are wrong, the map isn’t showing your performance — it’s showing your confusion.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>How Sigfides approaches NAP drift remediation</h2>
+
+    <p class="section-intro">
+      In the Sigfides Canonical Identity Sync™, NAP drift remediation is handled as a structured process:
+    </p>
+
+    <ul>
+      <li>We confirm the real-world truth first — not the most common online version.</li>
+      <li>We stabilise your canonical identity before modelling visibility.</li>
+      <li>We prioritise the removal of conflicting “zombie signals”.</li>
+      <li>We ensure crawl &amp; sitemap structures don’t keep resurfacing the past.</li>
+    </ul>
+
+    <p>
+      Only after identity is aligned do we benchmark before/after proximity confidence and trust radius.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>What to do next</h2>
+
+    <p class="section-intro">
+      If you suspect NAP drift or inconsistent identity history, a simple first step is:
+    </p>
+
+    <ul>
+      <li>Search your old address, phone or business name in quotes.</li>
+      <li>List every place where an outdated version still appears.</li>
+      <li>Check whether any of those pages are still indexed or linked.</li>
+      <li>Compare all visible details to the single “correct” version you want.</li>
+    </ul>
+
+    <p>
+      If the footprint is small, you can correct much of this yourself.
+      If the footprint is large, multi-location or historically complex,
+      Sigfides can formalise the Canonical Identity Record and align signals at scale.
+    </p>
+
+    <div class="pill-links">
+      <a class="pill" href="/">← Back to Sigfides Home</a>
+      <a class="pill" href="/canonical-identity-signals/">Canonical Identity Signals</a>
+      <a class="pill" href="/sigfides-vs-local-seo-tools/">Identity &amp; Proximity Tool Comparison Hub</a>
+    </div>
+  </div>
+
+  <footer>
+    Sigfides — Local Trust &amp; Proximity Signal Alignment<br />
+    Part of Pozycjonowanie Stron sp. z o.o. • Serving EU • UK • US • AU
+  </footer>
+
+</div>
+</body>
+</html>
