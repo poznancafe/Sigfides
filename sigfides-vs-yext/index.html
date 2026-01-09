@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Sigfides vs Yext — Identity Alignment vs Directory Broadcasting</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="How Sigfides differs from Yext. Yext distributes listings to directories — Sigfides fixes canonical identity, NAP accuracy, coordinates and entity trust before anything is broadcast." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --bg: #020617;
+  --border: #1f2937;
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+  --accent-teal: #22d3ee;
+  --accent-orange: #f97316;
+  --max-width: 1100px;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #0b1120, #020617 60%);
+  color: var(--text-main);
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px 16px 60px;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: #020617;
+  border: 1px solid rgba(148,163,184,.4);
+  box-shadow: 0 10px 30px rgba(0,0,0,.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.logo img { width: 95%; }
+
+.title {
+  font-family: "Playfair Display", serif;
+  letter-spacing: .15em;
+  font-size: 1.3rem;
+}
+
+.tagline {
+  color: var(--text-muted);
+  letter-spacing: .12em;
+  font-size: .8rem;
+  text-transform: uppercase;
+}
+
+/* Hero */
+
+.hero { text-align: center; }
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.9rem, 5vw, 2.4rem);
+  line-height: 1.2;
+  margin: 8px 0 10px;
+}
+
+.hero p {
+  max-width: 760px;
+  margin: 0 auto;
+  color: var(--text-muted);
+}
+
+.badge {
+  display: inline-flex;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(148,163,184,.5);
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg,#f97316,#22d3ee);
+}
+
+/* Content */
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.45rem;
+  margin-bottom: 6px;
+}
+
+.section-intro {
+  color: var(--text-muted);
+  max-width: 820px;
+  margin-bottom: 14px;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: #020617;
+  padding: 16px 14px 14px;
+  margin-bottom: 14px;
+}
+
+ul { margin: 6px 0 6px 1.1rem; }
+
+.pill-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.pill {
+  border-radius: 999px;
+  border: 1px solid rgba(148,163,184,.45);
+  padding: 6px 12px;
+  font-size: .8rem;
+  color: var(--accent-teal);
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* Footer */
+
+footer {
+  margin-top: 28px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(148,163,184,.4);
+  text-align: center;
+  color: var(--text-muted);
+  font-size: .8rem;
+}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<header>
+  <div class="logo">
+    <img src="/Sigfides.png" alt="Sigfides logo" />
+  </div>
+  <div class="title">SIGFIDES</div>
+  <div class="tagline">Trusted Signals for Real-World Identity</div>
+</header>
+
+<section class="hero">
+
+  <div class="badge"><span class="dot"></span> Tool Comparison</div>
+
+  <h1>Sigfides vs Yext — Identity Alignment vs Directory Broadcasting</h1>
+
+  <p>
+    Yext is a directory distribution and listings management platform.
+    It helps businesses publish NAP data across partner networks and aggregators.
+    <br><br>
+    <strong>Sigfides works one layer beneath that.</strong><br>
+    Before anything is broadcast, we confirm whether the
+    <strong>underlying identity, coordinates, schema and canonical record are actually correct.</strong>
+  </p>
+</section>
+
+<div class="card">
+  <h2>The core difference</h2>
+
+  <p class="section-intro">
+    Yext pushes your data outward.
+    Sigfides asks a more fundamental question first:
+  </p>
+
+  <p><strong>“Is the version of your identity being distributed actually the right one?”</strong></p>
+
+  <ul>
+    <li>If your old address still exists online</li>
+    <li>If your map pin is wrong</li>
+    <li>If your schema contradicts your GBP</li>
+    <li>If your landing page doesn’t match the entity</li>
+  </ul>
+
+  <p>
+    Then broadcasting that data simply amplifies confusion at scale.
+  </p>
+</div>
+
+<div class="card">
+  <h2>Where Yext is useful</h2>
+
+  <p class="section-intro">
+    Yext provides value when:
+  </p>
+
+  <ul>
+    <li>Your identity is already canonical and stable</li>
+    <li>Coordinates and NAP have been verified</li>
+    <li>Schema and GBP are aligned</li>
+    <li>You want to enforce consistency across directories</li>
+  </ul>
+
+  <p>
+    In that context, Yext acts as a distribution layer.
+  </p>
+</div>
+
+<div class="card">
+  <h2>Where Sigfides is needed first</h2>
+
+  <p class="section-intro">
+    Sigfides operates at the structural layer:
+  </p>
+
+  <ul>
+    <li>Canonical NAP identity & formatting</li>
+    <li>Entrance-accurate coordinates</li>
+    <li>GBP → landing page → schema coherence</li>
+    <li>Removal of conflicting legacy locations</li>
+    <li>Crawl-access verification for identity pages</li>
+  </ul>
+
+  <p>
+    Once reality is correct, <strong>then distribution makes sense</strong>.
+  </p>
+</div>
+
+<div class="card">
+  <h2>How to think about the relationship</h2>
+
+  <p class="section-intro">
+    Yext is a broadcasting tool.<br>
+    Sigfides is a truth-alignment process.
+  </p>
+
+  <p>
+    One spreads signals.
+    <br>
+    The other ensures those signals are trusted before they spread.
+  </p>
+
+  <div class="pill-links">
+    <a class="pill" href="/sigfides-vs-local-seo-tools/">← Back to Comparison Hub</a>
+    <a class="pill" href="/sigfides-vs-local-falcon/">Next: Sigfides vs Local Falcon →</a>
+  </div>
+</div>
+
+<footer>
+  Sigfides — Local Trust & Proximity Signal Alignment<br>
+  Part of Pozycjonowanie Stron sp. z o.o. • Serving EU • UK • US • AU
+</footer>
+
+</div>
+</body>
+</html>
